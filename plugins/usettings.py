@@ -46,7 +46,7 @@ async def userSettings(
 ┏**👤 User:** <a href='tg://user?id={uid}'>{fname}</a>
 ┣**🆔 ID:** <code>{usettings.user_id}</code>
 ┣**🚷 Ban Status:** <code>{usettings.banned}</code>
-┣**✅ Allowed:** <code>{usettings.allowed}</code>
+┣**🚦 Allowed:** <code>{usettings.allowed}</code>
 ┣**📝 Edit Metadata:** <code>{usettings.edit_metadata}</code>
 ┗**Ⓜ️ Merge Mode:** <code>{userMergeModeStr}</code>
 
