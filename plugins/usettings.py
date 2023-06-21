@@ -26,16 +26,16 @@ async def userSettings(
     if usettings.user_id:
         if usettings.merge_mode == 1:
             userMergeModeId = 1
-            userMergeModeStr = "Video 🎥 + Video 🎥"
+            userMergeModeStr = "Video + Video"
         elif usettings.merge_mode == 2:
             userMergeModeId = 2
-            userMergeModeStr = "Video 🎥 + Audio 🎵"
+            userMergeModeStr = "Video + Audio"
         elif usettings.merge_mode == 3:
             userMergeModeId = 3
-            userMergeModeStr = "Video 🎥 + Subtitle 📜"
+            userMergeModeStr = "Video + Subtitle"
         elif usettings.merge_mode == 4:
             userMergeModeId = 4
-            userMergeModeStr = "Extract 📂"
+            userMergeModeStr = "Extract"
         if usettings.edit_metadata:
             editMetadataStr = "✅"
         else:
@@ -54,10 +54,10 @@ async def userSettings(
 """
         markup = b.makebuttons(
             [
-                "Merge Mode",
-                userMergeModeStr,
-                "Edit Metadata",
+                "📝 Edit Metadata »",
                 editMetadataStr,
+                "Ⓜ️ Merge Mode »",
+                userMergeModeStr,
                 "Close",
             ],
             [
