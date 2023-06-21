@@ -41,13 +41,16 @@ async def userSettings(
         else:
             editMetadataStr = "❌"
         uSettingsMessage = f"""
-🛠️ 𝙐𝙨𝙚𝙧 𝙎𝙚𝙩𝙩𝙞𝙣𝙜𝙨 🛠️
+<b><u>🛠️ 𝙐𝙨𝙚𝙧 𝙎𝙚𝙩𝙩𝙞𝙣𝙜𝙨 🛠️</u></b>
+
 ┏**👤 User:** <a href='tg://user?id={uid}'>{fname}</a>
 ┣**🆔 ID:** <code>{usettings.user_id}</code>
-┣**🚫 Ban Status:** <code>{usettings.banned}</code>
+┣**🚷 Ban Status:** <code>{usettings.banned}</code>
 ┣**✅ Allowed:** <code>{usettings.allowed}</code>
 ┣**📝 Edit Metadata:** <code>{usettings.edit_metadata}</code>
 ┗**Ⓜ️ Merge Mode:** <code>{userMergeModeStr}</code>
+
+<a href="https://t.me/ACE_ML"><b>♥️ 𝗣𝗼𝘄𝗲𝗿𝗲𝗱 𝗕𝘆 @𝗔𝗖𝗘_𝗠𝗟</b></a>
 """
         markup = b.makebuttons(
             [
