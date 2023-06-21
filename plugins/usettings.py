@@ -35,7 +35,7 @@ async def userSettings(
             userMergeModeStr = "Video 🎥 + Subtitle 📜"
         elif usettings.merge_mode == 4:
             userMergeModeId = 4
-            userMergeModeStr = "Extract 📂" 
+            userMergeModeStr = "Extract 📂"
         if usettings.edit_metadata:
             editMetadataStr = "✅"
         else:
@@ -70,7 +70,7 @@ async def userSettings(
             rows=2,
         )
         res = await editable.edit(
-            text=uSettingsMessage, reply_markup=InlineKeyboardMarkup(markup)
+            text=uSettingsMessage, reply_markup=InlineKeyboardMarkup(markup), disable_web_page_preview=True
         )
     else:
         usettings.name = fname
