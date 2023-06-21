@@ -35,23 +35,23 @@ async def userSettings(
             userMergeModeStr = "Video 🎥 + Subtitle 📜"
         elif usettings.merge_mode == 4:
             userMergeModeId = 4
-            userMergeModeStr = "Extract" 
+            userMergeModeStr = "Extract 📂" 
         if usettings.edit_metadata:
             editMetadataStr = "✅"
         else:
             editMetadataStr = "❌"
         uSettingsMessage = f"""
-<b><u>Merge Bot settings for <a href='tg://user?id={uid}'>{fname} {lname}</a></u></b>
-    ┃
-    ┣**👦 ID: <u>{usettings.user_id}</u>**
-    ┣**{'🚫' if usettings.banned else '🫡'} Ban Status: <u>{usettings.banned}</u>**
-    ┣**{'⚡' if usettings.allowed else '❗'} Allowed: <u>{usettings.allowed}</u>**
-    ┣**{'✅' if usettings.edit_metadata else '❌'} Edit Metadata: <u>{usettings.edit_metadata}</u>**
-    ┗**Ⓜ️ Merge mode: <u>{userMergeModeStr}</u>**
+    🛠️ 𝙐𝙨𝙚𝙧 𝙎𝙚𝙩𝙩𝙞𝙣𝙜𝙨 🛠️
+    ┏**👤 User:** <a href='tg://user?id={uid}'>{fname} {lname}</a>
+    ┣**🆔 ID:** <code>{usettings.user_id}</code>
+    ┣**🚫 Ban Status:** <code>{usettings.banned}</code>
+    ┣**✅ Allowed:** <code>{usettings.allowed}</code>
+    ┣**📝 Edit Metadata:** <code>{usettings.edit_metadata}</code>
+    ┗**Ⓜ️ Merge Mode:** <code>{userMergeModeStr}</code>
 """
         markup = b.makebuttons(
             [
-                "Merge mode",
+                "Merge Mode",
                 userMergeModeStr,
                 "Edit Metadata",
                 editMetadataStr,
