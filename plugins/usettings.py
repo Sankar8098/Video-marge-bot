@@ -62,9 +62,9 @@ async def userSettings(
             ],
             [
                 "tryotherbutton",
-                f"ch@ng3M0de_{uid}_{(userMergeModeId%4)+1}",
-                "tryotherbutton",
                 f"toggleEdit_{uid}",
+                "tryotherbutton",
+                f"ch@ng3M0de_{uid}_{(userMergeModeId%4)+1}",
                 "close",
             ],
             rows=2,
